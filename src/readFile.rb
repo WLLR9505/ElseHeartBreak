@@ -9,12 +9,12 @@ module Read
         text.gsub!(/\r\n?/, "\n")
         text.each_line do |line|
             eng = Filter.string(line)
-            sleep(0.1)
-            # translated = Translate.translate(eng)
-            translated = "\"TRANSLATED HERE\""
+            sleep(0.5)
+            translated = Translate.translate(eng)
+            # translated = "\"TRANSLATED HERE\""
             endLine = line.index("\=\> \"") #separa parte suíça
 
-            Write.file("./Portuguese/#{path[10...path.size]}", "#{line[0...endLine]} \=\> #{translated}\n") # suiço => traduzido
+            Write.file("./Portuguese/#{path[10...path.size]}", "#{line[0...endLine]}\=\> #{translated}\n") # suiço => traduzido
 
             system("cls")
             line_num +=1

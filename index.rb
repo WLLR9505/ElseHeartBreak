@@ -8,7 +8,12 @@ require './src/readFile'
 #5 Reescrever arquivos
 
 listToTranslate = List.files()
+filesTranslated = 0
 
 for i in 0..listToTranslate.size
     textInFile = Read.file("#{listToTranslate[i]}")
+
+    system("cls")
+    filesTranslated +=1
+    print("#{filesTranslated} lines from #{listToTranslate.size}\n")
 end
