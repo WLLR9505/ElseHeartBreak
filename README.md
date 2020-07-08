@@ -5,10 +5,10 @@
 
 ## Script para tradução dos arquivos
 
-*Considerando a pasta 'English' na raiz do projeto*
+*Considerando  que a pasta 'English' esteja na raiz do projeto*
 > ruby index.rb
 
 **ATENÇÃO:** trocar o ponto inicial do loop de acordo com número de arquivos traduzidos.
 
 Exemplo:  
-6 arquivos traduzidos, então para baixar os próximos o loop deve iniciar em 6
+6 arquivos traduzidos, então para traduzir os próximos o loop deve iniciar em 6
