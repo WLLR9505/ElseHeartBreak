@@ -1,3 +1,5 @@
+require './src/filterText'
+
 module Archive
     class ArchiveID
         def initialize(path, lines)
@@ -31,5 +33,28 @@ module Archive
             fID.push(f)
         end
         return fID
+    end
+
+    def Archive.list
+        r = Dir['./English/*.mtf'].select {|f| !File.directory? f}
+        puts("#{r.size} files to translate")
+        return r
+    end
+
+    def Archive.read(path, bigText, allChars)
+        line_num = 0
+        text = File.open(path).read
+        text.gsub!(/\r\n?/, "\n")
+
+        text.each_line do |line|
+                bigText.push(Filter.string(line))
+                allChars = allChars + line.size
+            line_num +=1
+        end
+        return allChars
+    end
+
+    def Archive.write(filePath, text)
+        File.write(filePath, text, mode: 'a')
     end
 end

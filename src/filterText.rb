@@ -1,7 +1,15 @@
 module Filter
-    def Filter.string(text)
-        start = text.index("\=\> \"")
+    def Filter.selectEnglish(text)
+        return text.split("[]")
+    end
 
-        return text[start+3... text.size] # ignora trecho em suíço e '=>'
+    def Filter.string(text)
+
+        div = text.index(/ => /)
+        
+        swiss = text[0...div]
+        english = text[div+4...text.size]
+
+        return [swiss, english]
     end
 end

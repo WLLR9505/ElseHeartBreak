@@ -10,11 +10,17 @@ module Translate
         url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=#{sourceLang}&tl=#{targetLang}&dt=t&q=#{URI.escape(text)}"
 
         uri = URI(url)
-        
+
         response = Net::HTTP.get(uri)
         response = JSON.parse(response)
+        sleep(1)
 
-        return response[0][0][0]
+        bruteTranslated = ""
+
+        for i in 0...response[0].size
+            bruteTranslated = bruteTranslated + response[0][i][0]
+        end
+        return bruteTranslated
     end
 end
 
