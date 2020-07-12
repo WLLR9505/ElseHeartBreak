@@ -1,7 +1,13 @@
-# ElseHeartBreak
 
+<h1 align="center">
+ElseHeartBreak
 ![alt](https://steamcdn-a.akamaihd.net/steam/apps/400110/header.jpg?t=1447377823)
-[Else Heart.Break()](https://store.steampowered.com/app/400110/Else_HeartBreak/)
+[](https://store.steampowered.com/app/400110/Else_HeartBreak/)
+</h1>
+
+<h1 align="center">
+    <img alt="demo" src="./docs/20200712155435_1.jpg" width="800px" />
+</h1>
 
 ## Script para tradução dos arquivos
 
