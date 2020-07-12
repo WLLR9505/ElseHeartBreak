@@ -12,3 +12,11 @@
 
 Exemplo:  
 6 arquivos traduzidos, então para traduzir os próximos o loop deve iniciar em 6
+
+**IMPORTANTE:**
+Arquivo SendMessages.eng.mtf **editado manualmente**, *linhas 2, 3, 4*  
+
+ignore os arquivos:  
+- SetupCharacters.eng.mtf
+- SetupComputers.eng.mtf
+- SetupElevators.eng.mtf
